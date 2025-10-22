@@ -16,3 +16,8 @@ keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
 
 keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+
+keymap.set("n", "<leader>sH", "<C-w>h", { desc = "Navigate to left split" })
+keymap.set("n", "<leader>sL", "<C-w>l", { desc = "Navigate to right split" })
+keymap.set("n", "<leader>sK", "<C-w>k", { desc = "Navigate to top split" })
+keymap.set("n", "<leader>sJ", "<C-w>j", { desc = "Navigate to bottom split" })
