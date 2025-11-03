@@ -37,4 +37,4 @@ local colorSchemes = {
 	end,
 }
 
-return colorSchemes.kanagawa("lotus")
+return colorSchemes.kanagawa("dragon")
