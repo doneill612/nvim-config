@@ -53,9 +53,7 @@ return {
 							enable = true,
 						},
 					},
-					checkOnSave = {
-						command = "clippy",
-					},
+					checkOnSave = true,
 					procMacro = {
 						enable = true,
 					},
