@@ -18,11 +18,12 @@ return {
 			ensure_installed = {
 				"lua_ls",
 				"ts_ls",
-				"pyright",
+				"ty",
 				"gopls",
 				"omnisharp",
 				"rust_analyzer",
 			},
+			handlers = {},
 		})
 
 		local mason_registry = require("mason-registry")

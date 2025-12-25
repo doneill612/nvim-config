@@ -15,7 +15,7 @@ local colorSchemes = {
 			end,
 		}
 	end,
-	kanagawa = function(themeName)
+	kanagawa = function(variant)
 		return {
 			"rebelot/kanagawa.nvim",
 			lazy = false,
@@ -26,15 +26,44 @@ local colorSchemes = {
 					compile = false,
 					undercurl = true,
 					commentStyle = { italic = true },
-					keywordStyle = { italic = true, bold = true },
+					keywordStyle = { italic = false, bold = true },
 					transparent = false,
-					theme = themeName,
+					theme = variant,
 				})
 				vim.cmd("colorscheme kanagawa")
-				themeColor.load(themeName)
+				themeColor.load(variant)
+			end,
+		}
+	end,
+	miasma = function()
+		return {
+			"xero/miasma.nvim",
+			lazy = false,
+			priority = 1000,
+			config = function()
+				vim.cmd("colorscheme miasma")
+			end,
+		}
+	end,
+	noctis = function(variant)
+		return {
+			"talha-akram/noctis.nvim",
+			lazy = false,
+			priority = 1000,
+			config = function()
+				vim.cmd("colorscheme " .. (variant or "noctis"))
+			end,
+		}
+	end,
+	oxocarbon = function()
+		return {
+			"nyoom-engineering/oxocarbon.nvim",
+			lazy = false,
+			config = function()
+				vim.cmd("colorscheme oxocarbon")
 			end,
 		}
 	end,
 }
 
-return colorSchemes.kanagawa("dragon")
+return colorSchemes.oxocarbon()

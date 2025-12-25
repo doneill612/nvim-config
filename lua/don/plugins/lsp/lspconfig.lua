@@ -47,6 +47,7 @@ return {
 			settings = {
 				["rust-analyzer"] = {
 					cargo = {
+						-- target = "aarch64-unknown-linux-gnu",
 						allFeatures = true,
 						loadOutDirsFromCheck = true,
 						buildScripts = {
@@ -95,20 +96,6 @@ return {
 			},
 		})
 
-		-- Python
-		vim.lsp.config("pyright", {
-			settings = {
-				python = {
-					analysis = {
-						autoSearchPaths = true,
-						diagnosticMode = "workspace",
-						useLibraryCodeForTypes = true,
-						typeCheckingMode = "basic",
-					},
-				},
-			},
-		})
-
 		-- Go
 		vim.lsp.config("gopls", {
 			settings = {
@@ -135,7 +122,7 @@ return {
 		vim.lsp.enable({
 			"lua_ls",
 			"ts_ls",
-			"pyright",
+			"ty",
 			"gopls",
 			"omnisharp",
 			"rust_analyzer",
