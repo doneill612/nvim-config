@@ -122,7 +122,7 @@ return {
 		vim.lsp.enable({
 			"lua_ls",
 			"ts_ls",
-			"ty",
+			"pyright",
 			"gopls",
 			"omnisharp",
 			"rust_analyzer",

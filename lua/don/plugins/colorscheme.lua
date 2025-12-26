@@ -64,6 +64,16 @@ local colorSchemes = {
 			end,
 		}
 	end,
+	maya = function(variant)
+		return {
+			"rktjmp/lush.nvim",
+			lazy = false,
+			priority = 1000,
+			config = function()
+				vim.cmd("colorscheme maya-" .. (variant or "dark"))
+			end,
+		}
+	end,
 }
 
-return colorSchemes.oxocarbon()
+return colorSchemes.maya()
